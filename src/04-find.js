@@ -13,7 +13,12 @@ const exampleSongData = require("../data/songs");
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object} A single object.
  */
-function findPinkElephantsByTimestreet(songs) {}
+function findPinkElephantsByTimestreet(songs) {
+  if (songs.length === 0){
+    throw "Songs must be filled with atleast song"
+  }
+  return songs.find( ({title}) => title === 'Pink Elephants' )
+}
 
 /**
  * Returns the first song in the list that is under three minutes.
